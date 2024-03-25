@@ -1,15 +1,27 @@
+
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import WeatherCard from './components/WeatherCard';
+import Outputcard from './components/OutputCard';
+import PromptCard from './components/PromptCard';
+
+const inputWeatherCrad ={
+  title: "Find the actual weather on the globe",
+  description:"This weather card provides users with essential information about the current and upcoming weather conditions, along with helpful tips to stay safe and prepared for any weather-related events."
+}
+
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [promp, setPrompt] = useState("");
+  const [weatherDataLoading, setWeatherDataLoading] =  useState(false);
+  const [errorMsg, setErrorMsg] =  useState("");
 
   return (
-    <>
-       "Welcome to wheater app based on AI chatting!"
-    </>
+    <div className='main-app'>  
+     <WeatherCard children={<PromptCard title={inputWeatherCrad.title} description={inputWeatherCrad.description }/>}/>
+     <WeatherCard children={ <Outputcard/>}/>
+    </div>
   )
 }
 
