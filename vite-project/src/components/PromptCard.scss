@@ -1,0 +1,21 @@
+$fontHeading: 30px;
+
+.textArea{
+    border: solid 1px gray;
+    border-radius: 5px;
+    display: block;
+    width: 500PX;
+    overflow: hidden;
+    resize: both;
+    min-height: 40px;
+    line-height: 20px;
+    text-align: left;
+    padding: 5px 10px;
+}
+// .textarea[contenteditable]:empty::before {
+//     content: "Placeholder still possible";  
+//   }
+
+ .prompt-card-title{
+    font-size: $fontHeading;
+}

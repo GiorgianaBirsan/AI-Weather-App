@@ -1,0 +1,20 @@
+$display: flex;
+$background-color: rgb(65, 69, 73);
+$font: 20px;
+$defaultPadding: 20px;
+$defaultGap:10px;
+
+.weather-card{
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: 600px;
+    background-color: $background-color;
+    border: none;
+    border-radius: 20px;
+    padding: $defaultPadding;
+    gap:$defaultGap;
+    align-items: center;
+    justify-content: center;
+}
+
