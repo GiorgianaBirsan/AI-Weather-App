@@ -1,5 +1,3 @@
-$fontHeading: 30px;
-
 .textArea{
     border: solid 1px gray;
     border-radius: 5px;
@@ -12,10 +10,8 @@ $fontHeading: 30px;
     text-align: left;
     padding: 5px 10px;
 }
-// .textarea[contenteditable]:empty::before {
-//     content: "Placeholder still possible";  
-//   }
+
 
  .prompt-card-title{
-    font-size: $fontHeading;
+    font-size: 30px;
 }
