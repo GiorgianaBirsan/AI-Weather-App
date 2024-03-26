@@ -1,10 +1,20 @@
-import './OutputCard.scss'
+import './OutputCard.css'
 
-export default function Outputcard({location,temperature,description}:{location:string, temperature:string, description:string}){
+export default function Outputcard({locationPrompt,temperature,weatherDescription,loading}:{
+     locationPrompt:string,
+     temperature:string,
+     weatherDescription:string, 
+     loading:any
+    }){
+
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+
     return <>
     <div className="weather-data">
         <div className="weather-location">
-           <span className="location">{location}</span>
+           <span className="location">{locationPrompt}</span>
         </div>
         <hr className='break-line'/>
         <div className="weather-temperature">
@@ -12,7 +22,7 @@ export default function Outputcard({location,temperature,description}:{location:
         </div>
     
        <div className="weather-description">
-         <span className="description">{description}</span>
+         <span className="description">{weatherDescription}</span>
         </div>
         </div>
     </>
