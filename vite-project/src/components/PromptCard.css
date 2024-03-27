@@ -1,0 +1,17 @@
+.textArea{
+    border: solid 1px gray;
+    border-radius: 5px;
+    display: block;
+    width: 500PX;
+    overflow: hidden;
+    resize: both;
+    min-height: 40px;
+    line-height: 20px;
+    text-align: left;
+    padding: 5px 10px;
+}
+
+
+ .prompt-card-title{
+    font-size: 30px;
+}
