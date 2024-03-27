@@ -1,4 +1,6 @@
 
+// using Api key from https://openweathermap.org
+
 const LocationToCoordinates = async(locationString:any)=>{
     try {
       const response = await fetch( `https://api.openweathermap.org/geo/1.0/direct?q=${locationString}&limit=1&APPID=${import.meta.env.VITE_OWM}`)

@@ -3,7 +3,7 @@ const PromptToLocation = (prompt:string) =>{
     const url = ' https://api.openai.com/v1/chat/completions'
    
     const data={
-        "model": "gpt-4-0613",
+        "model": "gpt-3.5-turbo-0613",
         "messages": [
             {
             "role": "user",
@@ -40,6 +40,8 @@ const PromptToLocation = (prompt:string) =>{
         ],
         "function_call": "auto"
     }
+
+    // using secret API key from https://openai.com/blog/openai-api
     const params ={
         headers:{
             Authorization: `Bearer ${import.meta.env.VITE_OPENAI}`,
@@ -54,8 +56,14 @@ const PromptToLocation = (prompt:string) =>{
     .then(response => response.json())
     .then(data=> {
         const res = JSON.parse(data.choices[0].message.function_call.arguments)
-            const locationString = `${res.city},${res.county},${res.countryCode}`
-            return locationString;
+
+        if(res.county==="" || res.county== res.city){
+            const locationCityCountry = `${res.city},${res.countryCode}`
+           return locationCityCountry;
+        }else{
+            const locationFull = `${res.city},${res.county},${res.countryCode}`
+            return locationFull
+        }
     }
     )
     .catch(err => {
