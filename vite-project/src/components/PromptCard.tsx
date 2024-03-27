@@ -18,7 +18,7 @@ const promptCard ={
 
   
 
-export default function PromptCard({location,weatherDescription,loadingData}:any){
+export default function PromptCard({location,weatherDescription,humidity,temp,tempFeels,tempMax,tempMin,icon,wind,loadingData,}:any){
 
     const [prompt, setPrompt]= useState("");
 
@@ -34,7 +34,16 @@ export default function PromptCard({location,weatherDescription,loadingData}:any
           const weatherData = await WeatherData(coordinatesResult);
           
          //this pass props state to sibling component
-          weatherDescription(weatherData);
+         if(weatherData?.length){
+             weatherDescription(weatherData[0].description);
+             humidity(weatherData[0].humidity)
+             temp(weatherData[0].temperature)
+             tempFeels(weatherData[0].temperatureFeels)
+             tempMax(weatherData[0].temperatureMax)
+             tempMin(weatherData[0].temperatureMin)
+             icon(weatherData[0].icon)
+             wind(weatherData[0].wind)
+         }
         } catch (error) {
         
           console.error('Error fetching data:', error);
