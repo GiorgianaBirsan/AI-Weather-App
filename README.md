@@ -2,7 +2,8 @@
 
 This React-based weather app, with the help of AI, is finally an interactive experience that knows what location you want weather information from, explains the weather data in simple language.
 
-![image](https://github.com/GiorgianaBirsan/AI-Weather-App/assets/64731577/f9f312b2-e550-42c7-ad6e-e35e526ca361)
+![image](https://github.com/GiorgianaBirsan/AI-Weather-App/assets/64731577/d998e0e3-2c72-4e0d-8a45-f73142068630)
+
 
 ## Notes
 
