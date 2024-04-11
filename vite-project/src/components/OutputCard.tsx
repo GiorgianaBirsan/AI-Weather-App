@@ -42,7 +42,7 @@ export default function Outputcard({locationPrompt,weatherDescription,loading,ic
                         <span className='feelslike-temp'>Humidity: {humidity}%</span>
                     </div>
                     <div className="weather-description">
-                        <span className="description">Right now the weather is {weatherDescription}!</span> 
+                        <span className="description">{weatherDescription}!</span> 
                         <div className='temp-variation'>
                             <span>Max temperature: {temperature_max}°C</span>
                             <span>Min temperature: {temperature_min}°C</span>
