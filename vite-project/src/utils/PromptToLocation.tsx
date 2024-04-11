@@ -66,8 +66,7 @@ const PromptToLocation = (prompt:string) =>{
         }
     }
     )
-    .catch(err => {
-       
+    .catch(() => {
         return Promise.reject("Could not found the location!")
     });
 
