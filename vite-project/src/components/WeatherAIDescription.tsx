@@ -1,7 +1,7 @@
 const WeatherAIDescription = (prompt:any, weatherData:any) =>{
  
     const url = 'https://api.openai.com/v1/chat/completions'
-    
+        
     const sysMsg= `Act like a weather app. Based on my [Question] , create a short description of the [WeatherData] and provide a short opinion of what to wear
     (e.g bring a jacket, wear a rain coat, bring sunglasses etc)/what to do(go biking, play tennis, do a snowman etc). Don't bring in the response the value of temperatures or 
     wind speed or humidity. 
@@ -42,7 +42,6 @@ const WeatherAIDescription = (prompt:any, weatherData:any) =>{
     .then(data=> {
         const res= data.choices[0].message.content
         return res
-      // console.log("new data:", typeof data.choices[0].message.content)
     }
     )
     .catch(err => {

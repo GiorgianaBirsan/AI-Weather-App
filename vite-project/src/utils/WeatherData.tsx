@@ -1,8 +1,7 @@
 const WeatherData = async ({lat,lon} :{lat:any, lon:any}) =>{
     try {
-       const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${import.meta.env.VITE_OWM}&units=metric`)     
+       const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${import.meta.env.VITE_OWM}&units=metric`) 
        const data = await response.json()
-       console.log("data", data) ;
        
        const weatherDescription = data.weather[0].description
        const temperature = data.main.temp

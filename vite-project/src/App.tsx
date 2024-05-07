@@ -35,10 +35,11 @@ function App() {
                        icon={setIcon}
                        wind={setWind}
                        loadingData={setLoadingData}
-
+                     
                   />}
-      />
-     <WeatherCard 
+       />
+      {locationPrompt?.length>0 && (
+        <WeatherCard 
           children={ 
                 <Outputcard
                        locationPrompt={locationPrompt} 
@@ -52,7 +53,8 @@ function App() {
                        tempMin={tempMin}
                        wind={wind}     
                 />}
-      />
+        />
+      )}
 
     </div>
   )
